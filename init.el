@@ -161,6 +161,10 @@
 	      :pre-build ("make" "CC=gcc" "binary")
 	      :files (:defaults ("sqlite" "sqlite/emacsql-sqlite"))))
 
+(use-package transient
+  :config
+  (setq transient-save-history nil))
+
 (use-package magit
   :bind ("C-x g" . magit-status))
 
