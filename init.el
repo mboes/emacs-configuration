@@ -145,6 +145,13 @@
   :config
   (projectile-mode))
 
+(use-package emacsql-sqlite
+  ;; Straight does not know about the patched binary that
+  ;; emacsql-sqlite requires, so build it manually.
+  :straight (emacsql-sqlite
+	      :pre-build ("make" "CC=gcc" "binary")
+	      :files (:defaults ("sqlite" "sqlite/emacsql-sqlite"))))
+
 (use-package magit
   :bind ("C-x g" . magit-status))
 
