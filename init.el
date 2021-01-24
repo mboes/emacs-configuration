@@ -114,9 +114,6 @@
            (get-buffer-create "*compilation*"))
           (message "No Compilation Errors!"))))
 
-;; Load Dired-x when Dired is loaded.
-(require 'dired-x)
-
 (use-package bazel-mode)
 
 (use-package typescript-mode)
