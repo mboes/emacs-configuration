@@ -60,18 +60,16 @@
   :config
   (load-theme 'base16-tomorrow-night t))
 
-(use-package ido
+(use-package ivy
+  :diminish
   :config
-  (ido-mode t)
-  (ido-everywhere 1)
-  (setq ido-max-dir-file-cache 0)
-  :hook (file-file . ido-save-history)
-  :bind ("M-i" . ido-goto-symbol))
+  (ivy-mode)
+  (setq ivy-use-virtual-buffers t))
 
-(use-package flx-ido
-  :config
-  (flx-ido-mode 1)
-  (setq ido-use-faces nil))    ; disable ido faces to see flx highlights.
+(use-package swiper
+  :bind
+  (("C-s" . swiper)
+   ("C-r" . swiper)))
 
 (use-package flyspell
   :config
@@ -157,7 +155,7 @@
   :diminish
   :config
   (smartparens-global-mode t))
-  
+
 (use-package editorconfig
   :diminish
   :config
