@@ -120,7 +120,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 120 :family "Iosevka"))))
+ '(default ((t (:height 140 :family "Iosevka"))))
  '(font-lock-function-name-face ((t (:height 1.0))))
  '(markup-complex-replacement-face ((t (:inherit markup-meta-face :background "purple3" :foreground "plum1" :box (:line-width 2 :style released-button) :height 0.7))))
  '(markup-meta-face ((t (:stipple nil :foreground "gray40" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :width normal :foundry "unknown"))))
