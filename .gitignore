@@ -3,3 +3,6 @@
 *.eld
 *.cache
 *.sqlite
+*.db
+/bookmarks
+/recentf
