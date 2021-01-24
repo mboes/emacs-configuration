@@ -165,5 +165,7 @@
 
 (use-package org-roam
   :diminish
+  :config
+  (setq org-roam-directory "~/org/notes")
   :hook
   (after-init . org-roam-mode))
