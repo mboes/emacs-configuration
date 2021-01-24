@@ -69,7 +69,11 @@
   :diminish
   :config
   (ivy-mode)
-  (setq ivy-use-virtual-buffers t))
+  (setq ivy-use-virtual-buffers t)
+  :bind
+  (:map ivy-minibuffer-map
+   ("C-j" . #'ivy-immediate-done)
+   ("RET" . #'ivy-alt-done)))
 
 (use-package swiper
   :bind
