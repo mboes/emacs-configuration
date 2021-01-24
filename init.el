@@ -49,6 +49,8 @@
 
 (straight-use-package 'use-package)
 
+(use-package diminish)
+
 (use-package bind-key)
 
 (use-package base16-theme
@@ -114,8 +116,6 @@
 
 ;; Load Dired-x when Dired is loaded.
 (require 'dired-x)
-
-(use-package diminish)
 
 (use-package bazel-mode)
 
