@@ -60,6 +60,11 @@
   :config
   (load-theme 'base16-tomorrow-night t))
 
+(use-package recentf
+  :config
+  (setq recentf-max-saved-items 200)
+  (setq recentf-max-menu-items 15))
+
 (use-package ivy
   :diminish
   :config
