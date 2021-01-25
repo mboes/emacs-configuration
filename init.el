@@ -65,20 +65,20 @@
   (setq recentf-max-saved-items 200)
   (setq recentf-max-menu-items 15))
 
-(use-package ivy
-  :diminish
+(use-package selectrum
   :config
-  (ivy-mode)
-  (setq ivy-use-virtual-buffers t)
+  (selectrum-mode +1)
   :bind
-  (:map ivy-minibuffer-map
-   ("C-j" . #'ivy-immediate-done)
-   ("RET" . #'ivy-alt-done)))
+  ("C-x C-z" . #'selectrum-repeat))
 
-(use-package swiper
-  :bind
-  (("C-s" . swiper)
-   ("C-r" . swiper)))
+(use-package selectrum-prescient
+  :after selectrum
+  :config
+  (selectrum-prescient-mode +1))
+
+(use-package ctrlf
+  :config
+  (ctrlf-mode +1))
 
 (use-package flyspell
   :config
