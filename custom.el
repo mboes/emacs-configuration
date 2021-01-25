@@ -28,8 +28,6 @@
  '(compilation-message-face 'default)
  '(compilation-scroll-output 'first-error)
  '(compilation-window-height 15)
-  '(completion-ignored-extensions
-     '(".svn/" "CVS/" ".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".dvi" ".fmt" ".tfm" ".pdf" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".fasl" ".ufsl" ".fsl" ".dxl" ".pfsl" ".dfsl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".hi" ".cmo" ".cmi" ".cmx"))
  '(coq-prog-args '("-emacs-U"))
  '(css-tab-mode 'indent)
  '(current-language-environment "UTF-8")
@@ -100,14 +98,10 @@
  '(send-mail-function 'smtpmail-send-it)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
- '(smtpmail-smtp-server "smtp.gmail.com")
- '(smtpmail-smtp-service 587)
  '(straight-use-package-by-default t)
   '(text-mode-hook
      '(turn-on-auto-fill table-recognize text-mode-hook-identify))
  '(tool-bar-mode nil)
- '(tramp-auto-save-directory "~/.emacs.d/auto-save-tramp/")
- '(tramp-default-method "scpx")
  '(transient-mark-mode t)
  '(typescript-auto-indent-flag nil)
  '(typescript-indent-level 2)
