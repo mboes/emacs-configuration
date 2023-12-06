@@ -148,6 +148,7 @@
 (use-package undo-tree
   :diminish
   :config
+  (setq undo-tree-auto-save-history nil)
   (global-undo-tree-mode))
 
 (use-package projectile
