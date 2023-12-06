@@ -125,7 +125,7 @@
            (get-buffer-create "*compilation*"))
           (message "No Compilation Errors!"))))
 
-(use-package bazel-mode)
+(use-package bazel)
 
 (use-package typescript-mode)
 
