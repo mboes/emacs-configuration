@@ -124,6 +124,14 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :commands
+  lsp)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+
 (use-package haskell-mode
   :config
   (setq haskell-stylish-on-save nil)
@@ -135,7 +143,11 @@
   :hook
   ((haskell-mode . haskell-indentation-mode)
    (haskell-mode . (lambda () (set-fill-column 80)))
-   (haskell-mode . flyspell-prog-mode)))
+   (haskell-mode . flyspell-prog-mode)
+   (haskell-mode . #'lsp)
+   (haskell-literate-mode . #'lsp)))
+
+(use-package lsp-haskell)
 
 (setq compilation-finish-functions
       (lambda (buf str)
