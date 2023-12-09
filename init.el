@@ -23,10 +23,6 @@
 
 ;; Elisp editing
 (setq lisp-indent-offset 2)
-(add-hook 'after-save-hook
-          (lambda ()
-            (if (eq major-mode 'emacs-lisp-mode)
-                (save-excursion (byte-compile-file buffer-file-name)))))
 
 (setq
  auto-save-default nil
