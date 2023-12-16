@@ -196,3 +196,8 @@
   :diminish
   :config
   (editorconfig-mode 1))
+
+(use-package ledger-mode
+  :mode ("\\.ledger\\'")
+  :config
+  (setq ledger-accounts-file "~/finances/accounts.ledger"))
