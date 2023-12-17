@@ -224,6 +224,6 @@
   (editorconfig-mode 1))
 
 (use-package ledger-mode
-  :mode ("\\.ledger\\'")
   :config
-  (setq ledger-accounts-file "~/finances/accounts.ledger"))
+  (setq ledger-accounts-file "~/finances/accounts.ledger")
+  (setq ledger-default-date-format ledger-iso-date-format))
