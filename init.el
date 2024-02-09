@@ -6,11 +6,6 @@
 ;; For performance.
 (setq bidi-display-reordering nil)
 
-;; Hide UI chrome
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-
 (setq inhibit-startup-screen t)
 
 (setq ring-bell-function #'(lambda ())) ; Turns off that bloody bell
