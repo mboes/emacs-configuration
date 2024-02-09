@@ -1,33 +1,76 @@
-(load "~/.emacs.d/custom")
 (load "~/.emacs.d/lib")
 (load "~/.emacs.d/org")
 
+(set-face-attribute 'default nil :height 120 :family "Iosevka")
+
+;; For performance.
+(setq bidi-display-reordering nil)
+
+;; Hide UI chrome
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
+(setq inhibit-startup-screen t)
+
 (setq ring-bell-function #'(lambda ())) ; Turns off that bloody bell
+
 (fset 'yes-or-no-p 'y-or-n-p)		; Replace yes/no by y/n
+
 (setq frame-title-format (concat invocation-name ": %b %f"))
 
 (global-set-key "\C-x\C-y" 'x-clipboard-yank)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 (global-set-key (kbd "M-SPC") 'dabbrev-expand)
 
+;; Transpose windows
+(define-key ctl-x-4-map (kbd "t") 'transpose-windows)
+
 ;; Disable narrowing
 (put 'narrow-to-defun  'disabled nil)
 (put 'narrow-to-page   'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 
-;; For performance.
-(setq bidi-display-reordering nil)
-
-;; Transpose windows
-(define-key ctl-x-4-map (kbd "t") 'transpose-windows)
-
-;; Elisp editing
-(setq lisp-indent-offset 2)
-
 (setq
  auto-save-default nil
  create-lockfiles nil
  make-backup-files nil)
+
+(global-auto-revert-mode 1)
+(global-hl-line-mode 1)
+
+(setq calendar-date-style 'european)
+(setq calendar-week-start-day 1)
+
+(setq column-number-mode t)
+
+(setq display-time-24hr-format t)
+(setq display-time-mode t)
+
+(setq fill-nobreak-predicate '(fill-french-nobreak-p))
+
+(setq ispell-local-dictionary "en_GB-ize-w_accents")
+
+(setq kill-whole-line t)
+
+(setq lisp-indent-offset 2)
+
+(setq mouse-yank-at-point t)
+
+(setq require-final-newline t)
+
+(setq save-interprogram-paste-before-kill t)
+
+(setq sentence-end-double-space nil)
+
+(setq show-paren-mode t)
+
+(setq transient-mark-mode t)
+
+(setq user-full-name "Mathieu Boespflug")
+(setq user-mail-address "mboes@tweag.net")
+
+(setq visible-bell nil)
 
 (defvar elpaca-installer-version 0.6)
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
