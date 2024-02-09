@@ -149,15 +149,6 @@
 
 (use-package lsp-haskell)
 
-(setq compilation-finish-functions
-      (lambda (buf str)
-        (unless (string-match "exited abnormally" str)
-          ;;no errors, make the compilation window go away in a few seconds
-          (run-at-time
-           "2 sec" nil 'delete-windows-on
-           (get-buffer-create "*compilation*"))
-          (message "No Compilation Errors!"))))
-
 (use-package bazel)
 
 (use-package typescript-mode)
