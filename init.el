@@ -1,5 +1,4 @@
 (load "~/.emacs.d/lib")
-(load "~/.emacs.d/org")
 
 (set-face-attribute 'default nil :height 120 :family "Iosevka")
 
