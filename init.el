@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (load "~/.emacs.d/lib")
 
 (set-face-attribute 'default nil :height 120 :family "Iosevka")
