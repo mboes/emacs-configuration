@@ -121,16 +121,15 @@
   (setq recentf-max-saved-items 200)
   (setq recentf-max-menu-items 15))
 
-(use-package selectrum
+(use-package vertico
   :config
-  (selectrum-mode +1)
-  :bind
-  ("C-x C-z" . #'selectrum-repeat))
+  (vertico-mode))
 
-(use-package selectrum-prescient
-  :after selectrum
-  :config
-  (selectrum-prescient-mode +1))
+(use-package orderless
+  :init
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
 
 (use-package ctrlf
   :config
