@@ -1,7 +1,5 @@
 ;; -*- lexical-binding: t; -*-
 
-(load "~/.emacs.d/lib")
-
 (set-face-attribute 'default nil :height 120 :family "Iosevka")
 
 ;; For performance.
@@ -20,9 +18,6 @@
 (global-set-key "\C-x\C-y" 'x-clipboard-yank)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 (global-set-key (kbd "M-SPC") 'dabbrev-expand)
-
-;; Transpose windows
-(define-key ctl-x-4-map (kbd "t") 'transpose-windows)
 
 ;; Disable narrowing
 (put 'narrow-to-defun  'disabled nil)
