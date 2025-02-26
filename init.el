@@ -45,8 +45,6 @@
 
 (setq fill-nobreak-predicate '(fill-french-nobreak-p))
 
-(setq ispell-local-dictionary "en_GB-ize-w_accents")
-
 (setq kill-whole-line t)
 
 (setq lisp-indent-offset 2)
@@ -137,6 +135,14 @@
 (use-package ctrlf
   :config
   (ctrlf-mode +1))
+
+(use-package ispell
+  :ensure nil
+  :config
+  (setq ispell-dictionary "en_GB"))
+  ;; (setq ispell-dictionary "en_GB,fr-classique")
+  ;; (ispell-set-spellchecker-params)
+  ;; (ispell-hunspell-add-multi-dic "en_GB,fr-classique"))
 
 (use-package flyspell
   :ensure nil
