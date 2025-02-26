@@ -9,7 +9,7 @@
 
 (setq inhibit-startup-screen t)
 
-(setq ring-bell-function #'(lambda ())) ; Turns off that bloody bell
+(setq ring-bell-function #'ignore)	; Turns off that bloody bell
 
 (fset 'yes-or-no-p 'y-or-n-p)		; Replace yes/no by y/n
 
