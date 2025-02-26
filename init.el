@@ -1,5 +1,8 @@
 ;; -*- lexical-binding: t; -*-
 
+(when (file-exists-p "~/.emacs.d/secrets")
+  (load "~/.emacs.d/secrets"))
+
 (set-face-attribute 'default nil :height 120 :family "Iosevka")
 
 ;; For performance.
@@ -59,9 +62,6 @@
 (setq show-paren-mode t)
 
 (setq transient-mark-mode t)
-
-(setq user-full-name "Mathieu Boespflug")
-(setq user-mail-address "mboes@tweag.net")
 
 (setq visible-bell nil)
 
