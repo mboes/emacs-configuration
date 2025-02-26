@@ -9,9 +9,11 @@
 
 (setq inhibit-startup-screen t)
 
-(setq ring-bell-function #'ignore)	; Turns off that bloody bell
+;; Turns off that bloody bell
+(setq ring-bell-function #'ignore)
 
-(fset 'yes-or-no-p 'y-or-n-p)		; Replace yes/no by y/n
+;; Replace yes/no by y/n
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (setq frame-title-format (concat invocation-name ": %b %f"))
 
