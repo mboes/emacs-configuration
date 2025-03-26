@@ -253,6 +253,6 @@
 (use-package jsonrpc)
 
 (use-package copilot
-  :elpaca (:host github :repo "copilot-emacs/copilot.el" :files ("dist" "*.el")))
+  :ensure (:host github :repo "copilot-emacs/copilot.el" :files ("dist" "*.el")))
 
 (use-package nickel-mode)
