@@ -5,6 +5,8 @@
 
 (set-face-attribute 'default nil :height 120 :family "Iosevka")
 
+(load-theme 'modus-vivendi t)
+
 ;; For performance.
 (setq bidi-display-reordering nil)
 
@@ -110,10 +112,6 @@
 (elpaca-wait)
 
 (use-package diminish)
-
-(use-package base16-theme
-  :config
-  (load-theme 'base16-tomorrow-night t))
 
 (use-package recentf
   :ensure nil
