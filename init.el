@@ -124,6 +124,10 @@
   :config
   (vertico-mode))
 
+(use-package marginalia
+  :init
+  (marginalia-mode))
+
 (use-package orderless
   :init
   (setq completion-styles '(orderless basic)
