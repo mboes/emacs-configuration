@@ -23,6 +23,7 @@
 (global-set-key "\C-x\C-y" 'x-clipboard-yank)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 (global-set-key (kbd "M-SPC") 'dabbrev-expand)
+(global-set-key (kbd "M-o") 'delete-blank-lines)
 
 ;; Disable narrowing
 (put 'narrow-to-defun  'disabled nil)
