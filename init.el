@@ -20,7 +20,7 @@
 
 (setq frame-title-format (concat invocation-name ": %b %f"))
 
-(global-set-key (kbd "C-x SPC") 'just-one-space)
+(global-set-key (kbd "M-SPC") 'cycle-spacing)
 (global-set-key (kbd "M-o") 'delete-blank-lines)
 
 ;; Disable narrowing
