@@ -138,6 +138,30 @@
   :config
   (ctrlf-mode +1))
 
+(use-package dired
+  :ensure nil
+  :hook
+  ((dired-mode . dired-hide-details-mode))
+  :config
+  (setq dired-recursive-copies 'always)
+  (setq dired-recursive-deletes 'always)
+  (setq dired-free-space nil)
+  (setq dired-clean-up-buffers-too t)
+  (setq dired-clean-confirm-killing-deleted-buffers t)
+  (setq dired-dwim-target t)
+  (setq dired-listing-switches "-AGFhlv --group-directories-first --time-style=long-iso"))
+
+(use-package dired-subtree
+  :after dired
+  :bind
+  ( :map dired-mode-map
+    ("<tab>" . dired-subtree-toggle)
+    ("TAB" . dired-subtree-toggle)
+    ("<backtab>" . dired-subtree-remove)
+    ("S-TAB" . dired-subtree-remove))
+  :config
+  (setq dired-subtree-use-backgrounds nil))
+
 (use-package ispell
   :ensure nil
   :config
