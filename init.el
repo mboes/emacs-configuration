@@ -21,7 +21,6 @@
 (setq frame-title-format (concat invocation-name ": %b %f"))
 
 (global-set-key (kbd "C-x SPC") 'just-one-space)
-(global-set-key (kbd "M-SPC") 'dabbrev-expand)
 (global-set-key (kbd "M-o") 'delete-blank-lines)
 
 ;; Disable narrowing
@@ -60,6 +59,10 @@
 (setq sentence-end-double-space nil)
 
 (setq show-paren-mode t)
+
+(setq tab-always-indent 'complete)
+
+(setq tab-first-indent 'word-or-paren-or-punct)
 
 (setq transient-mark-mode t)
 
@@ -132,6 +135,13 @@
   (setq completion-styles '(orderless basic)
         completion-category-defaults nil
         completion-category-overrides '((file (styles partial-completion)))))
+
+(use-package corfu
+  :init
+  (global-corfu-mode)
+  :config
+  (setq corfu-popupinfo-delay '(1.25 . 0.5))
+  (corfu-popupinfo-mode 1))
 
 (use-package ctrlf
   :config
