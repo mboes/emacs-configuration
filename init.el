@@ -235,11 +235,6 @@
   (setq undo-tree-auto-save-history nil)
   (global-undo-tree-mode))
 
-(use-package projectile
-  :diminish
-  :config
-  (projectile-mode))
-
 ;; Dependency of Magit
 (use-package transient
   :config
