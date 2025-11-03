@@ -234,7 +234,9 @@
 
 (use-package nix-mode)
 
-(use-package markdown-mode)
+(use-package markdown-mode
+  :config
+  (setq markdown-fontify-code-blocks-natively t))
 
 (use-package dockerfile-mode)
 
