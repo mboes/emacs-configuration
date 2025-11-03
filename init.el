@@ -126,6 +126,14 @@
   :config
   (vertico-mode))
 
+(use-package vertico-multiform
+  :after vertico
+  :ensure nil
+  :config
+  (add-to-list 'vertico-multiform-categories
+    '(jinx grid (vertico-grid-annotate . 20) (vertico-count . 4)))
+  (vertico-multiform-mode))
+
 (use-package marginalia
   :init
   (marginalia-mode))
@@ -230,24 +238,18 @@
   :config
   (setq dired-subtree-use-backgrounds nil))
 
-(use-package ispell
+(use-package jinx
   :ensure nil
-  :config
-  (setq ispell-dictionary "en_GB"))
-  ;; (setq ispell-dictionary "en_GB,fr-classique")
-  ;; (ispell-set-spellchecker-params)
-  ;; (ispell-hunspell-add-multi-dic "en_GB,fr-classique"))
-
-(use-package flyspell
-  :ensure nil
-  :config
-  (setq flyspell-abbrev-p nil)         ; Don't save abbreviations
-  (setq flyspell-sort-corrections nil)
+  :diminish
   :hook
-  ((LaTeX-mode . flyspell-mode)
-   (LaTeX-mode . reftex-mode)
-   (message-mode . turn-on-flyspell)
-   (markdown-mode . turn-on-flyspell)))
+  ((LaTeX-mode . jinx-mode)
+   (message-mode . jinx-mode)
+   (markdown-mode . jinx-mode))
+  :bind
+  (("M-$" . jinx-correct)
+   ("C-M-$" . jinx-languages))
+  :init
+  (setq jinx-languages "en_GB fr-classique"))
 
 (use-package windmove
   :ensure nil
