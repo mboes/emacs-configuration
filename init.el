@@ -3,7 +3,7 @@
 (when (file-exists-p "~/.emacs.d/secrets")
   (load "~/.emacs.d/secrets"))
 
-(set-face-attribute 'default nil :height 120 :family "Iosevka")
+(set-face-attribute 'default nil :height 120 :family "Iosevka Nerd Font")
 
 (load-theme 'modus-vivendi t)
 
