@@ -3,6 +3,9 @@
 (setq package-enable-at-startup nil)
 
 (setq frame-inhibit-implied-resize t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message t)
+(setq initial-scratch-message nil)
 
 (setq load-prefer-newer t)
 
