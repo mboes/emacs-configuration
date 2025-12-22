@@ -333,10 +333,4 @@
   (setq ledger-accounts-file "~/finances/accounts.ledger")
   (setq ledger-default-date-format ledger-iso-date-format))
 
-;; Dependency of copilot
-(use-package jsonrpc)
-
-(use-package copilot
-  :ensure (:host github :repo "copilot-emacs/copilot.el" :files ("dist" "*.el")))
-
 (use-package nickel-mode)
