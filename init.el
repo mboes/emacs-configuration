@@ -331,6 +331,8 @@
 (use-package ledger-mode
   :config
   (setq ledger-accounts-file "~/finances/accounts.ledger")
-  (setq ledger-default-date-format ledger-iso-date-format))
+  (setq ledger-default-date-format ledger-iso-date-format)
+  (setq ledger-binary-path "hledger")
+  (setq ledger-mode-should-check-version nil))
 
 (use-package nickel-mode)
