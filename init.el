@@ -335,4 +335,5 @@
   (setq ledger-binary-path "hledger")
   (setq ledger-mode-should-check-version nil))
 
-(use-package nickel-mode)
+(use-package nickel-ts-mode
+  :vc (:url "https://github.com/mboes/nickel-ts-mode"))
